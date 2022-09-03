@@ -6,7 +6,7 @@ const myStyle= StyleSheet.create({
         alignItems:'center',
         backgroundColor: 'orange',
         //flexDirection:'row'
-        width:'80%'
+        width:'90%'
         
     }
 })
