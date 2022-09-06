@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
 const myStyle= StyleSheet.create({
     ViewHeader:{
-        flex: 1,
+        flex: 2,
         justifyContent: 'center',
         alignItems:'center',
         backgroundColor: 'orange',
         //flexDirection:'row'
-        width:'90%'
+        width:'60%'
         
     }
 })
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor:'green',
         padding:10,
         borderRadius:10,
-        marginLeft:5|
+        marginLeft:5
     },
     textoTouchable:{
         color:'white',

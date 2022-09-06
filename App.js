@@ -14,14 +14,15 @@ export default function App() {
   let sumar = () => {
     setResultado(parseInt(valor1)+parseInt(valor2))
   }
-  let calcular = (props)=>{
+  let calcular = (oper)=>{
     let mresult=0;
+
     switch(oper){
       case '+':
-        mresult= parseFloat(valor1)-parseFloat(valor2)
+        mresult= parseFloat(valor1)+parseFloat(valor2)
         break;
       case '-':
-        mresult= parseFloat(valor1)+parseFloat(valor2)
+        mresult= parseFloat(valor1)-parseFloat(valor2)
         break;
       case '*':
         mresult= parseFloat(valor1)*parseFloat(valor2)
@@ -29,6 +30,13 @@ export default function App() {
       case '/':
         mresult= parseFloat(valor1)/parseFloat(valor2)
         break;
+      case '^':
+        mresult= Math.pow(parseFloat(valor1),parseFloat(valor2))
+        break;
+      case '√':
+        mresult= Math.cbrt(parseFloat(valor1),parseFloat(valor2))
+        break; 
+
     }
     setResultado(mresult)
   }
@@ -72,26 +80,45 @@ export default function App() {
         onPress={()=>calcular('+')}>
           <Text style={styles.textoTouchable}>+</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
         style={styles.Touchstile}
         onPress={()=>calcular('-')}>
           <Text style={styles.textoTouchable}>-</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
         style={styles.Touchstile}
         onPress={()=>calcular('*')}>
           <Text style={styles.textoTouchable}>*</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
         style={styles.Touchstile}
         onPress={()=>calcular('/')}>
           <Text style={styles.textoTouchable}>/</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+        style={styles.Touchstile}
+        onPress={()=>calcular('^')}>
+          <Text style={styles.textoTouchable}>^</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+        style={styles.Touchstile}
+        onPress={()=>calcular('√')}>
+          <Text style={styles.textoTouchable}>√</Text>
+        </TouchableOpacity>
+
+
         <TouchableOpacity
         style={styles.Touchstile}
         onPress={limpiar}>
           <Text style={styles.textoTouchable}>C</Text>
         </TouchableOpacity>
+
+
       </View>
       {/* <Button
      // style={{fontSize:60}}
