@@ -1,12 +1,17 @@
-import { Text,View,Image, requireNativeComponent } from "react-native";
-import { myStyle } from "../assets/styles/MyStyles";
+import { StyleSheet, Text, View, Image } from "react-native";
+import { myStyle } from "../assets/styles/Mystyles";
+
 export default function Header(props){
-    return (
-        <View style={myStyle.ViewHeader}>
-            <Image source={require(`../assets/img/${props.src}`)}
-            style={{width:'100%',height:'100%',resizeMode:'stretch'}}/>
-            {/*<Text style={{fontSize:80}}>{props.titulo}</Text>
-            <Text style={{fontSize:80}}>{props.subtitulo}</Text>*/}
+    return(
+        <View style= {myStyle.viewHeader}>
+            {/* <Text>{props.titulo}</Text>
+            <Text>{props.subtitulo}</Text> */}
+
+            <Image
+            // sacar la imagen de una ruta loca
+            source={require(`../assets/images/${props.src}`)}
+            style={{width:'50%', height:'90%', resizeMode:'stretch'}}
+            />
         </View>
     );
 }
