@@ -34,7 +34,7 @@ export default function App() {
         mresult= Math.pow(parseFloat(valor1),parseFloat(valor2))
         break;
       case '√':
-        mresult= Math.cbrt(parseFloat(valor1),parseFloat(valor2))
+        mresult= Math.sqrt(parseFloat(valor1),parseFloat(valor2))
         break; 
 
     }
@@ -47,11 +47,14 @@ export default function App() {
   }
   return (
     <View style={[styles.container,styles.alingView]}>
-      <Header src="calculadoras.jpg"/>
+      <Header src=".jpg"/>
       <View style={[styles.viewchild,{marginTop:10},styles.alingView]}>
 
-      <Image source={{uri:'https://i.pinimg.com/originals/a7/c2/ef/a7c2ef39ffacf87a32b6121f92f89362.jpg'}}
-        style={{width:100,height:100}}/>
+      <Image
+          source={{uri: "https://previews.123rf.com/images/kongvector/kongvector1711/kongvector171100451/88969237-dibujos-animados-de-graduaci%C3%B3n-linda-calculadora-personaje.jpg"}}
+          style={{width:100, height:100}}
+        />
+
       <Text style={{fontSize:30,marginTop:10}}>Valor 1</Text>
       <TextInput
         style={styles.textInputs}
